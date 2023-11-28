@@ -1,1 +1,1 @@
-for ths repo we will deal high level engineering
+For this repository, we will deal high level engineering
