@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    A class Rectangle that defines a rectangle by: (based on 4-rectangle.py)
+    A class Rectangle that defines a rectangle by: (based on 5-rectangle.py)
 """
 
 
@@ -9,10 +9,13 @@ class Rectangle:
     """
     This class defines a rectangle with width and height.
     """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """
         Initializes a new Rectangle with the given width and height.
         """
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -57,4 +60,5 @@ class Rectangle:
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
